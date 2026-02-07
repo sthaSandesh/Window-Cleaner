@@ -1,17 +1,22 @@
 {
   "name": "window-cleaner",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.0.1",
+  "main": "dist/cleaner.js",
+  "bin": "dist/cli.js",
+  "files": ["dist"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["temp" , "cleaner", "windows", "cli"],
+  "author": "sandesh",
   "license": "ISC",
-  "description": "",
+  "description": "Clean up your windows temporary files and folders",
+  "repository": {
+    "url": "https://github.com/sthaSandesh/Window-Cleaner",
+    "type": "git"
+  },
   "devDependencies": {
     "@types/node": "^25.0.9",
-    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }

@@ -12,7 +12,7 @@ function cleanFolder(folderPath: string): void {
     try {
       fs.rmSync(fullPath, {
         recursive: true,
-        force: true
+        force: true,
       });
     } catch {
       console.log("Skipped:", fullPath);
@@ -20,15 +20,13 @@ function cleanFolder(folderPath: string): void {
   }
 }
 
-const paths = [
-  os.tmpdir(),
-  "C:\\Windows\\Temp",
-  "C:\\Windows\\Prefetch"
-];
+export function clean() {
+  const paths = [os.tmpdir(), "C:\\Windows\\Temp", "C:\\Windows\\Prefetch"];
 
-for (const p of paths) {
-  console.log(`Cleaning: ${p}`);
-  cleanFolder(p);
+  for (const p of paths) {
+    console.log(`Cleaning: ${p}`);
+    cleanFolder(p);
+  }
+
+  console.log("Cleaning finished ✅");
 }
-
-console.log("Cleaning finished ✅");
